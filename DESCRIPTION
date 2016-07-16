@@ -6,7 +6,7 @@ Author: Derek Darves
 Maintainer: Derek Darves <darves@gmail.com>
 Description: Support files for NYC Data Science Academy Teaching Audition.
 License: GPL-3
-LazyData: false
+LazyData: true
 Depends:
     RCurl,
     jsonlite

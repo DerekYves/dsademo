@@ -6,5 +6,7 @@
 
 #' @format Data frame with two columns.
 #' @examples
+#' \dontrun{
 #'   geo_bucks
+#'   }
 "geo_bucks"

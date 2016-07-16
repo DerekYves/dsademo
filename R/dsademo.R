@@ -25,14 +25,16 @@ baseurlfunc <- function(x){
 #' and the numeric long in position 2, e.g. "41.42326, -73.94992"
 #' @return A numeric vector of length 1 containing distance to the nearest Starbucks from \code{place} in kilometers.
 #' @examples
+#' \dontrun{
 #' woods <- c(lat=41.42326, lng=-73.94992)
 #' coffeetime(woods)
+#' }
 #' @export
 coffeetime <- function(place) {
-	sb <- data(geo_bucks)
+	sb <- get("geo_bucks")
 	rad <- pi/180 # radian conversion
-	a1 <- sb$Latitude * rad
-	a2 <- sb$Longitude * rad
+	a1 <- sb[['Latitude']] * rad
+	a2 <- sb[['Longitude']] * rad
 	b1 <- place[1] * rad
 	b2 <- place[2] * rad
 	dlon <- b2 - a2

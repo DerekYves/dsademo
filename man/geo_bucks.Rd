@@ -15,7 +15,9 @@ geo_bucks
 #' Load SB geocodes
 }
 \examples{
+\dontrun{
   geo_bucks
+  }
 }
 \keyword{datasets}
 
