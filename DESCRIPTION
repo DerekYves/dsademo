@@ -6,8 +6,8 @@ Author: Derek Darves
 Maintainer: Derek Darves <darves@gmail.com>
 Description: Support files for NYC Data Science Academy Teaching Audition.
 License: GPL-3
-LazyData: TRUE
-Imports:
+LazyData: false
+Depends:
     RCurl,
     jsonlite
 RoxygenNote: 5.0.1

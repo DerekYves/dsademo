@@ -29,9 +29,10 @@ baseurlfunc <- function(x){
 #' coffeetime(woods)
 #' @export
 coffeetime <- function(place) {
+	sb <- data(geo_bucks)
 	rad <- pi/180 # radian conversion
-	a1 <- dsademo::geo_bucks$Latitude * rad
-	a2 <- dsademo::geo_bucks$Longitude * rad
+	a1 <- sb$Latitude * rad
+	a2 <- sb$Longitude * rad
 	b1 <- place[1] * rad
 	b2 <- place[2] * rad
 	dlon <- b2 - a2
@@ -54,14 +55,7 @@ rcurlbuild <- function(x){
 }
 
 
-#' Geo Coordinates for US Starbucks locations
-#' @source \url{https://opendata.socrata.com/Business/All-Starbucks-Locations-in-the-US-Map/ddym-zvjk}
 
-#' @format data.frame with 10,843 rows and two columns:
-#' \describe{
-#' \item{Latitude}{Latitude coordinate}
-#' \item{Longitude}{Longitude coordinate}
-#' }
-#' @examples
-#'   geo_bucks
-"geo_bucks"
+
+
+
