@@ -1,0 +1,13 @@
+Package: dsademo
+Type: Package
+Title: Load support files for teaching audition
+Version: 0.1.0
+Author: Derek Darves
+Maintainer: Derek Darves <darves@gmail.com>
+Description: Support files for NYC Data Science Academy Teaching Audition.
+License: GPL-3
+LazyData: TRUE
+Imports:
+    RCurl,
+    jsonlite
+RoxygenNote: 5.0.1
