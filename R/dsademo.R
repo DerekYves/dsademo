@@ -8,6 +8,14 @@
 #' @name dsademo
 NULL
 
+#' Load the Starbucks geo data
+#' @return A data.frame
+#' @source \href{https://opendata.socrata.com/Business/All-Starbucks-Locations-in-the-US-Map/ddym-zvjk}{socrata}
+#' @export
+get_sb <- function(){
+	x <- read.csv(system.file("extdata", "geo_bucks.txt", package="dsademo"))
+	return(x)
+}
 
 #' baseurlfunc: Prints the Google Maps API URL
 #' @param x NULL
@@ -31,7 +39,7 @@ baseurlfunc <- function(x){
 #' }
 #' @export
 coffeetime <- function(place) {
-	sb <- get("geo_bucks")
+	sb <- read.csv(system.file("extdata", "geo_bucks.txt", package="dsademo"))
 	rad <- pi/180 # radian conversion
 	a1 <- sb[['Latitude']] * rad
 	a2 <- sb[['Longitude']] * rad
@@ -46,6 +54,7 @@ coffeetime <- function(place) {
 	ks <- min(d) # smallest distance in the vector
 	return(ks)
 }
+
 
 #' rcurlbuild: Sets the environment for dsademo
 #' @param x a character vector of json text

@@ -19,7 +19,7 @@ coffeetime: Calculates the distance to the nearest Starbucks
 \examples{
 \dontrun{
 woods <- c(lat=41.42326, lng=-73.94992)
-coffeetime(sb, woods)
+coffeetime(woods)
 }
 }
 

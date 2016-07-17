@@ -2,6 +2,7 @@
 
 export(baseurlfunc)
 export(coffeetime)
+export(get_sb)
 export(rcurlbuild)
 importFrom(RCurl,getURL)
 importFrom(jsonlite,fromJSON)
